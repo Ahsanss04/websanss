@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #000000;
+    --second-bg-color: #161616;
+    --text-color: #fff;
+    --main-color: #7b4bb7;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body {
+    background: var(--bg-color);
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+}
+html::-webkit-scrollbar {
+    width: 0.8rem;
+}
+html::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 9%;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 3rem;
+    color: var(--main-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background: url(Gambar7.jpg);
+}
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 5%;
+}
+span {
+    color: var(--main-color);
+}
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 15%;
+    font-weight: 700;
+}
+.home-img {
+    border-radius: 50%;
+}
+.home-img img {
+    position: relative;
+    width: 20vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    height: 20vw;
+}
+.home-img img:hover {
+    transform: scale(1.01);
+    filter: drop-shadow(0 0 25px var(--main-color));
+}
+.home-content p {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.social-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    font-size: 3rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+}
+.social-icon a:hover {
+    color: white;
+    transform: scale(1.3)translateY(-5px);
+    background: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--bg-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn:hover {
+    transform: scale(1.03);
+    background-color: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: url(Gambar7.jpg);
+    padding-bottom: 6rem;
+}
+.heading {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.about-img {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-img img {
+    width: 90%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+}
+.about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--second-bg-color);
+    border-bottom: .2rem solid var(--second-bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+}
+.about-content {
+    text-align: center;
+}
+.about-content h3 {
+    font-size: 3rem;
+}
+.about-content p {
+    font-size: 2rem;
+    margin: 2rem 0 3rem;
+}
+.skills {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.skills-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    text-align: center;
+    font-style: italic;
+}
+.skill p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--main-color);
+}
+.progress-bar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.progress {
+    height: 100%;
+    background-color: var(--text-color);
+    transition: width 1s ease-in-out;
+    border-radius: 10px;
+}
+#portofolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: colum;
+    background: url(Gambar7.jpg);
+}
+.heading {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.portofolio-img {
+    position: relative;
+    width: 45rem;
+    height: 40rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portofolio-img img {
+    width: 80%;
+    height: 100%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+}
+.portofolio .portofolio-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 5%;
+    margin-bottom: 25%;
+}
+span {
+    color: var(--main-color);
+}
+.portofolio-content p {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.social-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    font-size: 3rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+}
+.social-icon a:hover {
+    color: white;
+    transform: scale(1.3)translateY(-5px);
+    background: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--bg-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn:hover {
+    transform: scale(1.03);
+    background-color: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+#sertifikat {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    gap: 7rem;
+    background: url(Gambar7.jpg);
+    padding-bottom: 10rem;
+}
+.sertifikat h2 {
+    font-size: 4rem;
+    margin-bottom: 0rem;
+    text-align: center;
+}
+.sertifikat-img1 {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sertifikat-img1 img {
+    width: 140%;
+    border-radius: 10%;
+    border: .2rem solid var(--main-color);
+}
+.sertifikat-img2 {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sertifikat-img2 img {
+    width: 140%;
+    border-radius: 10%;
+    border: .2rem solid var(--main-color);
+}
+.sertifikat-img3 {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sertifikat-img3 img {
+    width: 140%;
+    border-radius: 10%;
+    border: .2rem solid var(--main-color);
+}
+.sertifikat-img4 {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sertifikat-img4 img {
+    width: 140%;
+    border-radius: 10%;
+    border: .2rem solid var(--main-color);
+}
+.sertifikat-img1 .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 150%;
+    height: 120%;
+    border-radius: 20%;
+    border-top: .2rem solid var(--second-bg-color);
+    border-bottom: .2rem solid var(--second-bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+}
+.sertifikat-img2 .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 150%;
+    height: 120%;
+    border-radius: 20%;
+    border-top: .2rem solid var(--second-bg-color);
+    border-bottom: .2rem solid var(--second-bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+}
+.sertifikat-img3 .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 150%;
+    height: 120%;
+    border-radius: 20%;
+    border-top: .2rem solid var(--second-bg-color);
+    border-bottom: .2rem solid var(--second-bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+}
+.sertifikat-img4 .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 150%;
+    height: 120%;
+    border-radius: 20%;
+    border-top: .2rem solid var(--second-bg-color);
+    border-bottom: .2rem solid var(--second-bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+}
+.filter-menu {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+.sertifikat-content {
+    text-align: center;
+}
+.sertifikat-content h3 {
+    font-size: 2.6rem;
+}
+.sertifikat-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.1);
+    border-color: #007bff;
+}
+#filter {
+    background: url(Gambar7.jpg);
+}
+#maps {
+    background: url(Gambar7.jpg);
+}
+@media(max-width:1285px) {
+    html {
+        font-size: 55%;
+    }
+    .services-container {
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 5rem;
+    }
+}
+@media(max-width:991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .services {
+        padding-bottom: 7rem;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        padding: 1rem;
+    }
+    .navbar a {
+        margin-left: 0;
+        margin-right: 5px;
+        margin-top: 2rem;     
+    }
+    #home {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .home-img img {
+        width: 25vw;
+    }
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-text{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5rem;
+    } 
+    
+    .skills {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .buttons {
+        gap: 1rem;
+    }
+    
+    .buttons .btn {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+        flex: 1 1 150px;
+    }
+    #sertifikat {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center; 
+        padding: 5rem 0;
+    }
+    .sertifikat h2 {
+        font-size: 3rem; 
+    }
+    .sertifikat-img1 {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        margin: 2rem 0;
+    }
+    .sertifikat-img1 img {
+        max-width: 100%;
+    height: auto;
+    border-radius: 10%;
+    }
+    .sertifikat-img1 .circle-spin {
+        width: 120%; 
+        height: 100%;
+    }
+    .sertifikat-img2 {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        margin: 2rem 0;
+    }
+    .sertifikat-img2 img {
+        max-width: 100%;
+    height: auto;
+    border-radius: 10%;
+    }
+    .sertifikat-img2 .circle-spin {
+        width: 120%; 
+        height: 100%;
+    }
+    .sertifikat-img3 {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        margin: 2rem 0;
+    }
+    .sertifikat-img3 img {
+        max-width: 100%;
+    height: auto;
+    border-radius: 10%;
+    }
+    .sertifikat-img3 .circle-spin {
+        width: 120%; 
+        height: 100%;
+    }
+    .sertifikat-img4 {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        margin: 2rem 0;
+    }
+    .sertifikat-img4 img {
+        max-width: 100%;
+    height: auto;
+    border-radius: 10%;
+    }
+    .sertifikat-img4 .circle-spin {
+        width: 120%; 
+        height: 100%;
+    }
+    .sertifikat-content h3 {
+        font-size: 2rem;
+    }
+    .sertifikat-content p {
+        font-size: 1.4rem;
+    }
+
+}
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+    header a, nav a {
+        font-size: 1.2rem;
+    }
+    .logo{
+        font-size: 1.2rem;
+    }
+    #home .home-content h1 {
+        font-size: 4rem;
+    }
+    .profile-image img {
+        width: 150px;
+        height: 160px;
+    }
+    .buttons .btn {
+        padding: 0.8rem 1.5rem;
+    }
+    #footer p {
+        font-size: 1.4rem;
+    }
+    #sertifikat {
+        gap: 2rem; /* Jarak antar item lebih kecil */
+    }
+    .sertifikat h2 {
+        font-size: 2.5rem; /* Lebih kecil untuk layar ekstra kecil */
+    }
+    .sertifikat-img {
+        width: 15rem;
+        height: 15rem;
+    }
+    .sertifikat-content h3 {
+        font-size: 1.8rem;
+    }
+    .sertifikat-content p {
+        font-size: 1.2rem;
+    }
+}
